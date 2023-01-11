@@ -6,6 +6,7 @@ import Loading from '../components/Loading';
 import { exerciseOptions, fetchData } from '../utils/fetchData';
 
 const ExercisesList = () => {
+  // eslint-disable-next-line no-unused-vars
   const [loading, setLoading] = useState(false);
     const [exerciseList, setExerciseList] = useState([]);
     let params = useParams();
