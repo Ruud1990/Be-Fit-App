@@ -947,6 +947,12 @@ FOOTER
   align-items: center;
   justify-content: center;
 }
+
+.social-icons-footer li {
+  margin-left: 10px;
+  color: var(--clr-grey-5);
+}
+
 .dash {
   width: 2px;
   height: 30px;
