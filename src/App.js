@@ -14,6 +14,7 @@ import ExerciseDetail from './components/ExerciseDetail';
 import BmrCalculator from './routes/BmrCalculator';
 import GroceryList from './routes/GroceryList';
 import Footer from './components/Footer';
+import Modal from './components/Favorites';
 
  
 import './styles.css';
@@ -25,6 +26,7 @@ const App = () => {
       <>
         
       <Navbar />
+      <Modal />
       <Routes>
         <Route path='/' exact element={<Home />} />
         <Route path='/groceryList' element={<GroceryList />} />

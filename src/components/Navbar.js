@@ -1,9 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {FaBars } from 'react-icons/fa';
+import {BsHeartFill } from 'react-icons/bs';
 import { social } from '../assets/data';
+import { useGlobalContext } from '../favoriteContext';
 
 const Navbar = () => {
+  const { noDuplicates} = useGlobalContext();
+    const {openModal} = useGlobalContext();
     const [showLinks, setShowLinks] = useState(false);
     const linksContainerRef = useRef(null);
     const linksRef = useRef(null);
@@ -51,6 +55,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
+          <button className="btn btn-favorites" onClick={openModal}><BsHeartFill></BsHeartFill> {noDuplicates.length}</button>
           <ul className='social-icons'>
             {social.map((socialIcon) => {
               const { id, url, icon } = socialIcon;

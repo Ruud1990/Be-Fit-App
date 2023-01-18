@@ -1,16 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
-// import Loading from '../components/Loading';
 import { exerciseOptions, fetchData } from '../utils/fetchData';
 
 const Exercise = () => {
-    // const [loading, setLoading] = useState(false);
     const [details, setDetails] = useState({});
 
     let params = useParams();
 
     const fetchDetails = async () => {
-        //   const data = await fetchData(`https://api.spoonacular.com/recipes/${params.name}/information?apiKey=${process.env.REACT_APP_RECIPES_KEY}`);
           const data = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/exercise/${params.id}`, exerciseOptions);
           const detailData = data;
           console.log(detailData);
